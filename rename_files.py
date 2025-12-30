@@ -1,6 +1,6 @@
 import os
 
-folder = "files_to_rename"
+folder = input("Enter folder name to rename files: ")
 
 for filename in os.listdir(folder):
     old_path = os.path.join(folder, filename)
