@@ -1,0 +1,7 @@
+Proyecto: File Organizer Script
+Fecha: [02-01-2025]
+
+- Aprendí a ejecutar scripts desde la terminal.
+- Entendí errores comunes como rutas inexistentes.
+- Aprendí que documentar es tan importante como programar.
+- Este proyecto podría usarse en oficinas, escuelas o despachos.
