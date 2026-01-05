@@ -1,4 +1,4 @@
-# File Organizer Script (Python)
+# File Organizer Automation Script (Python)
 
 ## Overview
 This project is a Python automation script designed to organize files automatically by type, helping reduce manual work, human errors, and time wasted managing unstructured folders.
@@ -19,29 +19,21 @@ The script scans a source folder, identifies files based on their extensions, an
 ## How to Run
 ```bash
 py automation/organize_files.py files_input files_output
-Use Cases
-Office and administrative environments
 
-Universities and academic institutions
+## Use Cases
+- Office and administrative environments
+- Universities and academic institutions
+- Freelancers managing multiple document types
+- Small businesses and personal productivity workflows
 
-Freelancers managing multiple document types
+## Technologies Used
+- Python
+- Standard libraries (os, sys)
+- Command-line execution
+- Git & GitHub
 
-Small businesses and personal productivity workflows
-
-Technologies Used
-Python
-
-Standard libraries (os, sys)
-
-Command-line execution
-
-Git & GitHub
-
-Future Improvements
-Logging system for file operations
-
-Support for additional file formats
-
-Improved CLI arguments
-
-Optional user interface
+##Future Improvements
+- Logging system for file operations
+- Support for additional file formats
+- Improved CLI arguments
+- Optional user interface
