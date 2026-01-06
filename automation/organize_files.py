@@ -13,6 +13,10 @@ def validate_folders(source_folder, output_folder):
 
 
 def organize_files(source_folder, output_folder):
+    if not os.listdir(source_folder):
+        print("Source folder is empty. No files to organize.")
+        return
+
     for filename in os.listdir(source_folder):
         file_path = os.path.join(source_folder, filename)
 
@@ -37,7 +41,7 @@ def main():
     validate_folders(source_folder, output_folder)
     organize_files(source_folder, output_folder)
 
-    print("Files organized successfully.")
+    print(f"Files from '{source_folder}' were successfully organized into '{output_folder}'.")
 
 
 if __name__ == "__main__":
