@@ -45,14 +45,14 @@ py automation/organize_files.py files_input files_output --dry-run
 ```
 ## Technologies Used
 
-Python
-Standard libraries (os, sys, shutil)
-Command-line execution
-Git & GitHub
+- Python
+- Standard libraries (os, sys, shutil)
+- Command-line execution
+- Git & GitHub
 
 ## Future Improvements
 
-Logging system for file operations
-Support for additional file formats
-Improved CLI arguments and flags
-Optional user interface
+- Logging system for file operations
+- Support for additional file formats
+- Improved CLI arguments and flags
+- Optional user interface
