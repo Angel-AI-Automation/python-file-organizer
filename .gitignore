@@ -1,5 +1,9 @@
-# Ignore Python cache
-__pycache__/
-
-# Ignore personal learning notes
+# Ignore runtime folders
+files_input/
+files_output/
 notes/
+
+# Ignore OS / editor files
+__pycache__/
+*.pyc
+.vscode/
