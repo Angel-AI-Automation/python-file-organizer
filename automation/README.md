@@ -1,39 +1,58 @@
 # Automation Scripts
 
+## Overview
 This directory contains Python automation scripts designed to solve practical file management problems.
-These scripts are written with clean structure, readability, and real-world usage in mind.
+The scripts focus on clarity, reusability, and real-world command-line usage.
 
-## Script: organize_files.py
+They are intentionally simple, well-structured, and easy to extend, making them suitable for learning,
+personal productivity, and small automation tasks.
 
-### Description
-This script automatically organizes files from an input directory into an output directory.
-Files are renamed using a standardized format and moved according to simple automation rules.
+---
 
-### How it works
-1. Reads all files from the `files_input` directory
-2. Normalizes file names (lowercase, underscores instead of spaces)
-3. Moves processed files into the `files_output` directory
-4. Prevents crashes by validating folder existence
+## Scripts Included
 
-### Usage
-From the project root, run:
+- **organize_files.py**  
+  Automatically organizes files from an input directory into an output directory.
+  Files are processed based on their extensions and moved into categorized folders.
 
-```bash
-py automation/organize_files.py
-### Command-line usage
+---
 
-This script supports command-line arguments, making it reusable in different environments:
+## How It Works
+
+1. Reads all files from the specified input directory
+2. Validates that both input and output directories exist
+3. Skips execution if the source directory is empty
+4. Identifies file types by extension
+5. Moves files into categorized folders inside the output directory
+6. Prevents crashes by handling common edge cases
+
+---
+
+## Usage
+
+Run the script from the project root using the command line:
 
 ```bash
 py automation/organize_files.py files_input files_output
-This approach allows flexible automation without modifying the source code.
+```
+## Optional: Safe Execution (Dry Run)
 
-### Safe execution (dry-run)
-
-The script supports a dry-run mode that allows previewing file operations
-without making any changes:
+The script supports a dry-run mode that previews file operations without making changes.
+This is useful for testing behavior before running it in production environments.
 
 ```bash
 py automation/organize_files.py files_input files_output --dry-run
-This feature is useful for preventing accidental file modifications
-in production environments.
+```
+## Technologies Used
+
+Python
+Standard libraries (os, sys, shutil)
+Command-line execution
+Git & GitHub
+
+## Future Improvements
+
+Logging system for file operations
+Support for additional file formats
+Improved CLI arguments and flags
+Optional user interface
