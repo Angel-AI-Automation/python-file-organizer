@@ -1,17 +1,12 @@
-files = ["reporte.txt", "datos.txt", "resumen.txt"]
+"""
+Simple file generator for testing file organization scripts.
+Creates sample text files with basic content.
+"""
+
+files = ["report.txt", "data.txt", "summary.txt"]
 
 for file in files:
     with open(file, "w") as f:
-        f.write("Archivo creado automáticamente\n")
+        f.write("This file was generated automatically.\n")
 
-print("Archivos creados correctamente.")
-with open("reporte.txt", "w") as f:
-    f.write("Reporte generado automáticamente")
-
-with open("datos.txt", "w") as f:
-    f.write("Datos de ejemplo")
-
-with open("resumen.txt", "w") as f:
-    f.write("Resumen automático")
-
-print("Archivos creados correctamente")
+print("Sample files created successfully.")
