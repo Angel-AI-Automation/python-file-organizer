@@ -1,12 +1,14 @@
 """
-Simple file generator for testing file organization scripts.
-Creates sample text files with basic content.
+Sample File Generator
+
+Utility script used to generate sample text files for testing
+file organization and automation workflows.
 """
 
-files = ["report.txt", "data.txt", "summary.txt"]
+sample_files = ["report.txt", "data.txt", "summary.txt"]
 
-for file in files:
-    with open(file, "w") as f:
-        f.write("This file was generated automatically.\n")
+for filename in sample_files:
+    with open(filename, "w") as file:
+        file.write("This file was generated automatically for testing purposes.\n")
 
-print("Sample files created successfully.")
+print("Sample test files created successfully.")
