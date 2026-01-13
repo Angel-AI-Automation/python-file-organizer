@@ -1,9 +1,9 @@
 """
 File Organizer Script
 
-This script organizes files from a source folder into an output folder
-based on their file extensions. It is designed to be simple, reusable,
-and suitable for small office or administrative automation tasks.
+Organizes files from a source folder into an output folder based on file extensions.
+Designed to be simple, reusable, and suitable for small office or administrative
+automation tasks.
 """
 
 import os
@@ -13,7 +13,7 @@ import shutil
 
 def validate_folders(source_folder, output_folder):
     if not os.path.exists(source_folder):
-        print(f"Source folder does not exist: {source_folder}")
+        print(f"Error: Source folder does not exist -> {source_folder}")
         sys.exit(1)
 
     if not os.path.exists(output_folder):
@@ -50,7 +50,9 @@ def main():
     validate_folders(source_folder, output_folder)
     organize_files(source_folder, output_folder)
 
-    print(f"Files from '{source_folder}' were successfully organized into '{output_folder}'.")
+    print(
+        f"Files from '{source_folder}' were successfully organized into '{output_folder}'."
+    )
 
 
 if __name__ == "__main__":
