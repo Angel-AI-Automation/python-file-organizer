@@ -52,6 +52,11 @@ Make sure both folders exist before running the script.
 
 ## Code Design Notes
 
-- The script uses clear function separation to improve readability.
-- Early exits are applied to avoid unnecessary processing.
-- The project is intentionally kept simple to ensure maintainability.
+- The script is intentionally designed as a single-purpose automation tool.
+It uses clear function separation to improve readability and maintainability.
+
+- Input and output folders are validated before execution to prevent runtime errors.
+Early exits are applied to avoid unnecessary processing when the source directory is empty.
+
+- The project avoids unnecessary abstractions to keep the logic simple, transparent,
+and suitable for small automation tasks and non-complex environments.

@@ -18,7 +18,8 @@ Files are categorized based on their extensions and moved into structured folder
 3. Skips execution if the source directory is empty  
 4. Identifies file types by extension  
 5. Moves files into categorized folders inside the output directory  
-6. Handles common edge cases to prevent crashes  
+6. Handles basic edge cases such as empty source folders and invalid directory paths
+   to prevent unexpected crashes during execution.  
 
 ## Usage
 Run the script from the project root using the command line:
@@ -27,13 +28,11 @@ Run the script from the project root using the command line:
 py automation/organize_files.py files_input files_output
 ```
 
-## Optional: Safe Execution (Dry Run)
+## Optional: Safe Execution (Planned Feature)
 
-The script supports a dry-run mode that previews file operations without making changes.
-This is useful for testing behavior before running it in production environments.
-```bash
-py automation/organize_files.py files_input files_output --dry-run
-```
+A dry-run mode is planned to allow users to preview file operations
+without making changes to the file system. This feature is not yet implemented
+and is listed as a future improvement.
 
 ## Technologies Used
 
