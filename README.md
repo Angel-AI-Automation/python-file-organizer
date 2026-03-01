@@ -1,34 +1,70 @@
-# File Organizer Automation Script (Python)
+# File Organizer Automation Tool (Python)
 
 ## Overview
-This project is a Python automation script designed to organize files automatically by type.  
+
+This project is a modular Python automation tool designed to organize files automatically by type. 
 It reduces manual work, minimizes human error, and improves productivity when managing unstructured folders.
 
-## Why This Project Matters
-Manual file organization is a common but inefficient task in many workplaces.  
-This project demonstrates how simple Python automation can solve a real operational problem using clean, maintainable code.
+The project was refactored from a monolithic script into a modular architecture to improve maintainability, scalability, and testability.
+
+---
 
 ## Problem Statement
-In many real-world environments, files accumulate in a single directory without structure.  
+
+In many real-world environments, files accumulate in a single directory without structure. 
 This leads to disorganization, repetitive manual tasks, increased errors, and wasted time.
 
+---
+
 ## Solution
-The script scans a source folder, identifies files based on their extensions, and moves them into categorized folders inside an output directory.  
-This approach automates repetitive work and improves file management efficiency.
+
+The application scans a source folder, identifies files based on their extensions, and moves them into categorized folders inside an output directory.
+
+The logic responsible for classification is separated from filesystem operations to ensure clean architecture and easier testing.
+
+---
+
+## Architecture Design
+
+The project follows a modular structure:
+
+- **Business Logic Layer** (`classifier.py`) 
+Handles file extension extraction and classification logic.
+
+- **Filesystem Layer** (`filesystem.py`) 
+Encapsulates OS-level operations such as listing files, creating directories, and moving files.
+
+- **Orchestrator Layer** (`organizer.py`) 
+Coordinates business logic and filesystem interactions.
+
+- **CLI Entry Point** (`main.py`) 
+Handles argument parsing, validation, and execution flow.
+
+This separation improves:
+
+- Maintainability
+- Testability
+- Low coupling
+- Clear responsibility boundaries
+
+---
 
 ## Features
-- Automatic file organization by file extension  
-- Command-line interface support  
-- Clear and reusable automation logic  
-- Simple folder-based workflow  
-- Easily extendable for future improvements  
+
+- Automatic file organization by file extension
+- Modular architecture with separated concerns
+- Command-line interface support
+- Logging for execution tracking
+- Easily extendable structure for future improvements
+
+---
 
 ## How to Run
-```bash
-py automation/organize_files.py files_input files_output
-```
-Make sure both folders exist before running the script.
 
+```bash
+python main.py files_input files_output
+```
+ 
 ## Use Cases
 
 - Office and administrative environments
@@ -36,27 +72,34 @@ Make sure both folders exist before running the script.
 - Freelancers managing multiple document types
 - Small businesses and personal productivity workflows
 
+---
 ## Technologies Used
 
 - Python
-- Standard libraries (os, sys, shutil)
+- Standard Library (os, shutil, sys, logging)
+- Modular package structure
 - Command-line execution
-- Git & GitHub
+- Git & GitHub for version control
 
+---
 ## Future Improvements
 
-- Logging system for file operations
-- Support for additional file formats
-- Improved CLI arguments and flags
-- Optional user interface
+- Unit testing with pytest
+- Dry-run mode (simulate file moves)
+- Improved CLI argument parsing (argparse)
+- Structured logging improvements
+- Configuration-based file categorization
 
-## Code Design Notes
+ 
+## Code Design Principles
 
-- The script is intentionally designed as a single-purpose automation tool.
-It uses clear function separation to improve readability and maintainability.
+- Separation of concerns
+- Encapsulation of system interaction
+- Isolated and testable business logic
+- Clear orchestration layer
+- Maintainable and scalable structure
 
-- Input and output folders are validated before execution to prevent runtime errors.
-Early exits are applied to avoid unnecessary processing when the source directory is empty.
+This project demonstrates practical automation skills with clean architectural thinking suitable for junior technical roles.
 
-- The project avoids unnecessary abstractions to keep the logic simple, transparent,
-and suitable for small automation tasks and non-complex environments.
+
+
