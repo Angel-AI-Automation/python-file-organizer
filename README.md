@@ -64,7 +64,39 @@ This separation improves:
 ```bash
 python main.py files_input files_output
 ```
- 
+## Example
+
+Input:
+
+```text
+files_input/
+├── report.pdf
+├── photo.jpg
+├── notes.txt
+└── README
+```
+
+Run:
+
+```bash
+python main.py files_input files_output
+```
+
+Output:
+
+```text
+files_output/
+├── pdf/
+│   └── report.pdf
+├── jpg/
+│   └── photo.jpg
+├── txt/
+│   └── notes.txt
+└── no_extension/
+    └── README
+```
+The application automatically creates destination folders based on file extensions and moves each file into the corresponding category.
+
 ## Use Cases
 
 - Office and administrative environments
